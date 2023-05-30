@@ -8,7 +8,7 @@ const db = mysql.createConnection(
         password: 'root',
         database: 'employee_db'
     },
-    console.log(`Connected to the cms_db database.`)
+    console.log(`Connected to the employee_db database.`)
 )
 
 async function determineDBQuery(val) {
