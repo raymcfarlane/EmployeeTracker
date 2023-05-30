@@ -1,7 +1,27 @@
 {
   "dependencies": {
     "express": "^4.18.2",
+    "express.js": "^1.0.0",
     "inquirer": "^8.2.4",
+    "mysql": "^2.18.1",
     "nodemon": "^2.0.22"
-  }
+  },
+  
+  "name": "employeetracker",
+  "description": "## Table of Contents:   - [Description](#description)   - [Usage](#usage)   - [Installation](#installation)   - [Tests](#tests)   - [License](#license)   - [Questions](#questions)",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/raymcfarlane/EmployeeTracker.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/raymcfarlane/EmployeeTracker/issues"
+  },
+  "homepage": "https://github.com/raymcfarlane/EmployeeTracker#readme"
 }
