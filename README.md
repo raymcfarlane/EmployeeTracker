@@ -15,7 +15,7 @@ SO THAT I can organize and plan my business
 This application allows the business owner to view employees managers, roles, and departments to update or delete when necessary. 
 
 ## Usage
-images\Employeetrack.JPG
+  ![Employeetracker](https://github.com/raymcfarlane/EmployeeTracker/blob/de51aaa9c6f16110a47bcc94ee61df2c6b1442a3/images/Employeetrack.JPG)
 
 ## Installation 
 Install Inquirer 8.2.4 updated to 8.2.5
