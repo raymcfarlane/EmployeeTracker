@@ -15,6 +15,9 @@ SO THAT I can organize and plan my business
 This application allows the business owner to view employees managers, roles, and departments to update or delete when necessary. 
 
 ## Usage
+ - [Video Walk-through](https://drive.google.com/file/d/1OoR9AEXrCpGsFxiOo2pI-ZPy_MEC34pX/view)
+
+  - Images:
   ![Employeetracker](https://github.com/raymcfarlane/EmployeeTracker/blob/de51aaa9c6f16110a47bcc94ee61df2c6b1442a3/images/Employeetrack.JPG)
   ![Viewroleemployee](https://github.com/raymcfarlane/EmployeeTracker/blob/main/images/Viewroleemployee.JPG)
   ![depertments](https://github.com/raymcfarlane/EmployeeTracker/blob/main/images/departments.JPG)
