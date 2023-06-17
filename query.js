@@ -28,7 +28,7 @@ async function determineDBQuery(val) {
             break;
 
         case "View All Employees":
-            db.query('SELECT employee.id, CONCAT(employee.first_name," ", employee.last_name) AS Employee_Full_Name, employee.role_id AS Role_Title, role.title, role.salary AS Role_Salary, role.department_id, department.department_name, employee.manager_id, CONCAT(manager.first_name, " ", manager.last_name) AS Manager_Full_Name FROM employees employee JOIN employees manager ON employee.manager_id = manager.id JOIN role ON employee.role_id = role.id JOIN department ON role.department_id = department.id', function (err, results) {
+            db.query('SELECT * FROM employee JOIN role ON role_id = role.id', function (err, results) {
 
                 console.table((results));
             });
@@ -57,7 +57,7 @@ async function addRole(dept_id, title, salary) {
 }
 
 async function addEmployee(fn, ln, role_id, manager_id) {
-    db.query('INSERT INTO employees (first_name, last_name, role_id, manager_id) VALUES(?, ?, ?, ?)', [fn, ln, role_id, manager_id], function (err, results) {
+    db.query('INSERT INTO employee (first_name, last_name, role_id, manager_id) VALUES(?, ?, ?, ?)', [fn, ln, role_id, manager_id], function (err, results) {
         if (err) {
             console.log(err.message)
         } else {
@@ -67,7 +67,7 @@ async function addEmployee(fn, ln, role_id, manager_id) {
 }
 
 async function updateEmploee(role_ID, employee_id) {
-    db.query('UPDATE employees SET role_id = ? WHERE id = ?', [role_ID, employee_id], function (err, results) {
+    db.query('UPDATE employee SET role_id = ? WHERE id = ?', [role_ID, employee_id], function (err, results) {
         console.log("Employee updated!");
     })
 }
@@ -91,7 +91,7 @@ async function getAllDepartments() {
 }
 
 async function getAllEmployees() {
-    const allEmployes = await db.promise().query('SELECT id, CONCAT(first_name, " ", last_name) AS Employee_Name FROM employees')
+    const allEmployes = await db.promise().query('SELECT id, CONCAT(first_name, " ", last_name) AS Employee_Name FROM employee')
     const employeeChoices = allEmployes[0].map(({ id, Employee_Name }) => ({
         name: `${Employee_Name}`,
         value: id
